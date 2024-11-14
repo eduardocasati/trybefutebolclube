@@ -32,8 +32,21 @@ O projeto consiste em uma API para o gerenciamento de um campeonato de futebol, 
 
 Siga os passos abaixo:
 
-1. Crie e inicie os contêineres: docker-compose up -d --build
-2. Rode o comando npm run db:reset para criar o banco de dados com as tabelas que serão utilizadas e populá-las.
-3. Para usar o terminal do container use o comando docker exec -it trybesmith_api bash
+1. Acesse a pasta app `cd app`
+2. Crie e inicie os contêineres: `npm run compose:up`
 
-Com o projeto inicializado após as etapas acima, você pode fazer requisições à API na porta 3001: http://localhost:3001/{rota}.
+Com o projeto inicializado após as etapas acima, você pode **fazer requisições à API** na porta 3001: `http://localhost:3001/{rota}` e **acessar o front-end** pela url `http://localhost:3000`.
+
+## Executando os Testes
+
+Acesse `cd app/backend` e utilize o comando `npm run test`.
+
+Para executar os testes e mostrar a cobertura de testes utilize `npm run test:coverage`.
+
+## Documentação da API
+
+<details>
+
+<summary>Mostrar</summary>
+
+</details>
