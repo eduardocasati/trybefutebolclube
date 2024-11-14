@@ -1,0 +1,31 @@
+**/coverage
+**/node_modules*
+**/.nyc_output
+**/*.log
+**/build*
+coverage
+front.eval
+back.eval
+
+__tests__/
+.github/
+.trybe/
+.vscode/
+assets/
+
+.editorconfig
+data-testid.md
+db.example.sql
+dockerfile_denylist.sh
+FAQ.md
+trybe-filter-repo.sh
+trybe.yml
+
+## backend
+app/backend/.env.example
+app/backend/.eslintignore
+app/backend/.eslintrc.json
+app/backend/.eslintrc.json
+
+## frontend
+app/frontend/.env
