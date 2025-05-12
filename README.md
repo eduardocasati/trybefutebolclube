@@ -37,12 +37,6 @@ Siga os passos abaixo:
 
 Com o projeto inicializado após as etapas acima, você pode **fazer requisições à API** na porta 3001: `http://localhost:3001/{rota}` e **acessar o front-end** pela URL `http://localhost:3000`.
 
-## Executando os Testes
-
-Acesse `cd app/backend` e utilize o comando `npm run test`.
-
-Para executar os testes e mostrar a cobertura de testes utilize `npm run test:coverage`.
-
 ## Estrutura de Funcionalidades
 
 Todas as rotas possuem validação da estrutura esperada nas requisições à API.
