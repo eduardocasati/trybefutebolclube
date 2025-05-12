@@ -26,7 +26,7 @@ Este projeto teve como objetivo consolidar e avaliar conhecimentos dos seguintes
 
 ## O que foi Desenvolvido
 
-O projeto consiste em uma API para o gerenciamento de um campeonato de futebol, integrada a um website que acessa a API para consultar, cadastrar, atualizar e apagar informações.
+O projeto consiste em uma API para o gerenciamento de um campeonato de futebol, com autenticação, partidas, times e placares. O projeto utiliza Node.js com TypeScript, Express, Sequelize (ORM), JWT para autenticação e criptografia de senhas, com testes implementados em Mocha/Chai e cobertura via TDD. O sistema se conecta a um banco relacional e segue arquitetura MVC.
 
 ## Rodando o Projeto
 
@@ -43,10 +43,31 @@ Acesse `cd app/backend` e utilize o comando `npm run test`.
 
 Para executar os testes e mostrar a cobertura de testes utilize `npm run test:coverage`.
 
-## Documentação da API
+## Estrutura de Funcionalidades
 
-<details>
+Todas as rotas possuem validação da estrutura esperada nas requisições à API.
 
-<summary>Mostrar</summary>
+### Autenticação e Usuários
 
-</details>
+- Rota `/login` com validação de campos e autenticação via JWT.
+- Senhas armazenadas com hash e comparação segura.
+- Middleware para validação de token nas rotas privadas.
+- Rota `/login/role` para verificação de permissões.
+- Cobertura de cenários de erro como campos ausentes, formato inválido, token inválido ou inexistente.
+
+### Times
+
+- CRUD básico com endpoints para listar todos os times e buscar por ID (`GET` `/teams` ou `/teams/:id`).
+
+### Partidas
+
+- Rota para listagem de partidas (`GET` `/matches`).
+- Suporte a partidas em progresso ou finalizadas (`GET` `/matches?inProgress=true` ou `false`).
+- Suporte para finalizar uma partida em andamento (`PATCH` `/matches/:id/finish`).
+- Cadastro de novas partidas (`POST` `/matches`)
+
+### Placar e Classificação
+
+- Rota para mostrar a classificação geral dos times (`GET` `/leaderboard`).
+- Rota para retornar a classificação e as estatísticas dos times jogando em casa (`GET` `/leaderboard/home`).
+- Rota para retornar a classificação e as estatísticas dos times jogando fora de casa (`GET` `/leaderboard/away`).
