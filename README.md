@@ -26,7 +26,7 @@ Este projeto teve como objetivo consolidar e avaliar conhecimentos dos seguintes
 
 ## O que foi Desenvolvido
 
-O projeto consiste em uma API para o gerenciamento de um campeonato de futebol, com autenticação, partidas, times e placares. O projeto utiliza Node.js com TypeScript, Express, Sequelize (ORM), JWT para autenticação e criptografia de senhas, com testes implementados em Mocha/Chai e cobertura via TDD. O sistema se conecta a um banco relacional e segue arquitetura MVC.
+O projeto consiste em uma API para o gerenciamento de um campeonato de futebol, com autenticação, partidas, times e placares. O projeto utiliza Node.js com TypeScript, Express, Sequelize (ORM), JWT para autenticação e criptografia de senhas, com testes implementados em Mocha/Chai e cobertura via TDD. O sistema se conecta a um banco relacional e segue arquitetura MSC.
 
 ## Rodando o Projeto
 
